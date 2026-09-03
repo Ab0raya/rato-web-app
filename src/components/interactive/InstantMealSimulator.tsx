@@ -361,15 +361,31 @@ export const InstantMealSimulator: React.FC = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 className="flex flex-col items-center justify-center py-8 text-center space-y-6"
               >
-                <div className="relative w-64 sm:w-80 aspect-[16/9] rounded-2xl overflow-hidden bg-[#161616] border-2 border-[#FF6039]/40 shadow-[0_0_35px_-5px_rgba(255,96,57,0.35)]">
-                  <Image
-                    src="/creating_meal.gif"
-                    alt="RATO Creating Meal"
-                    fill
-                    unoptimized
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                <div className="relative w-64 sm:w-80 aspect-[16/9] flex items-center justify-center">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-contain drop-shadow-[0_10px_35px_rgba(255,96,57,0.35)]"
+                  >
+                    <source
+                      src="/Character_performing_animation_s%E2%80%A6_202609031748-Picsart-BackgroundRemover.webm"
+                      type="video/webm"
+                    />
+                    <source
+                      src="/creating_meal.webm"
+                      type="video/webm"
+                    />
+                    {/* Fallback transparent animated GIF */}
+                    <Image
+                      src="/creating_meal.gif"
+                      alt="RATO Creating Meal"
+                      fill
+                      unoptimized
+                      className="object-contain drop-shadow-[0_10px_35px_rgba(255,96,57,0.35)]"
+                    />
+                  </video>
                 </div>
 
                 <div className="space-y-2">
