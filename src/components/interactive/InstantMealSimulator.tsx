@@ -361,14 +361,15 @@ export const InstantMealSimulator: React.FC = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 className="flex flex-col items-center justify-center py-8 text-center space-y-6"
               >
-                <div className="relative w-28 h-28 rounded-full bg-[#161616] border-2 border-[#FF6039]/40 p-2 shadow-[0_0_30px_-5px_rgba(255,96,57,0.3)]">
+                <div className="relative w-64 sm:w-80 aspect-[16/9] rounded-2xl overflow-hidden bg-[#161616] border-2 border-[#FF6039]/40 shadow-[0_0_35px_-5px_rgba(255,96,57,0.35)]">
                   <Image
-                    src="/assets/oading state for Instant Meal screen.png"
-                    alt="RATO Chef thinking"
+                    src="/creating_meal.gif"
+                    alt="RATO Creating Meal"
                     fill
-                    className="object-cover object-top rounded-full"
+                    unoptimized
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 rounded-full ring-2 ring-[#FF6039] animate-ping opacity-20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                 </div>
 
                 <div className="space-y-2">
