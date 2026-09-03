@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rato-orange: #FF6039;
+  --color-rato-orange-hover: #ff7450;
+  --color-rato-orange-glow: rgba(255, 96, 57, 0.3);
+  --color-rato-dark: #161616;
+  --color-rato-dark-gray: #1A1A1E;
+  --color-rato-gray: #2A2A2F;
+  --color-rato-black: #0E0E11;
+  --color-rato-border: #2A2A2F;
+  --color-rato-surface: #1A1A1E;
+  --color-rato-surface-subtle: #161616;
+  --color-rato-text: #FFFFFF;
+  --color-rato-text-soft: #F4F4F6;
+  --color-rato-text-muted: #9E9EA8;
+
+  --font-ciento: var(--font-ciento), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-arabic: var(--font-arabic), "IBM Plex Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+:root {
+  --background: #0E0E11;
+  --foreground: #FFFFFF;
+  --rato-orange: #FF6039;
+  --rato-dark: #161616;
+  --rato-dark-gray: #1A1A1E;
+  --rato-gray: #2A2A2F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0E0E11;
+  color: #FFFFFF;
+  font-family: var(--font-ciento), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Arabic typography & RTL styles: IBM Plex Sans Arabic */
+[dir="rtl"],
+[dir="rtl"] body {
+  font-family: var(--font-arabic), "Segoe UI", Tahoma, Arial, sans-serif;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+/* Refined Arabic weights: clean, elegant, modern tech feel without heavy boldness */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] .font-black,
+[dir="rtl"] .font-extrabold {
+  font-weight: 600 !important;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .font-bold {
+  font-weight: 500 !important;
+}
+
+[dir="rtl"] .font-semibold {
+  font-weight: 500 !important;
+}
+
+[dir="rtl"] strong,
+[dir="rtl"] b {
+  font-weight: 600;
+}
+
+/* RTL Arrow Flipping */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Selection highlight */
+::selection {
+  background-color: #FF6039;
+  color: #FFFFFF;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E0E11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6039;
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  background: rgba(26, 26, 30, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-orange {
+  background: rgba(26, 26, 30, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 96, 57, 0.3);
+}
+
+.orange-glow {
+  box-shadow: 0 0 40px -10px rgba(255, 96, 57, 0.35);
+}
+
+.orange-glow-sm {
+  box-shadow: 0 0 20px -5px rgba(255, 96, 57, 0.25);
+}
+
+.orange-text-glow {
+  text-shadow: 0 0 24px rgba(255, 96, 57, 0.4);
+}
+
+/* Accessibility: Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
